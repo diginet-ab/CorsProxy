@@ -2,8 +2,17 @@ import * as express from "express"
 import * as parser from "body-parser"
 import * as request from "request"
 
+/**
+ * TypeScript class implementing a proxy server with CORS providing GET and POST access to servers without CORS.
+ */
 export class CorsProxy {
     public app: express.Express
+    /**
+     * Constructor
+     * @param host The interface (IP) to host the server
+     * @param port Server port
+     * @param log Optional log function with a string argument
+     */
     constructor(public host: string, public port: number, private log?: (message: string) => void) {
         this.app = express()
         this.app.use(parser.json());
