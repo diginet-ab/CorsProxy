@@ -35,8 +35,8 @@ constructor(public host: string, public port: number, private log?: (message: st
 #### Request
 
 ```typescript
-const url = "https://some.server/something"
-request.post(url, { json: { url: url} }, (error, response, body) => {
+const url = "http://127.0.0.1:8787/get?url=" +        encodeURIComponent("https://some.server/something")
+request(url, (error, response, body) => {
     if (!error)
     	console.log(body)
     else
@@ -51,11 +51,10 @@ request.post(url, { json: { url: url} }, (error, response, body) => {
 ```javascript
 var url = "https://some.server/something";
 $.ajax({
-        type: 'POST',
+        type: 'GET',
         accepts: 'application/json',
-        url: "http://127.0.0.1/proxyGet",
+        url: "http://127.0.0.1:8787/get?url=" +    		encodeURIComponent("https://some.server/something"),
         contentType: 'application/json',
-        data: JSON.stringify({ url: url}),
         error: function (jqXHR, textStatus, errorThrown) {
             alert('error');
         },
@@ -65,3 +64,6 @@ $.ajax({
     });
 ```
 
+#### Using Postman
+
+Select the URL parameter content, right-click and select EncodeURIComponent.
