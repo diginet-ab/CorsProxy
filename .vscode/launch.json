@@ -9,10 +9,10 @@
             "request": "launch",
             "sourceMaps": true,
             "name": "Launch Program",
-            "program": "${workspaceFolder}/examples/example1.js",
+            "program": "${workspaceFolder}/cli/cors-proxy.js",
             "args": [
                 "-p 8089",
-                "-h 127.0.0.1"
+                "-s 127.0.0.1"
             ],
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
