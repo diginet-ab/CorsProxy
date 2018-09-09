@@ -10,6 +10,10 @@ npm install @diginet/cors-proxy --save
 
 ## Usage
 
+### CLI
+
+
+
 ### Create proxy server
 
 ```typescript
@@ -35,7 +39,7 @@ constructor(public host: string, public port: number, private log?: (message: st
 #### Request
 
 ```typescript
-const url = "http://127.0.0.1:8787/get?url=" +        encodeURIComponent("https://some.server/something")
+const url = "http://127.0.0.1:8787/get?url=" + encodeURIComponent("https://some.server/something")
 request(url, (error, response, body) => {
     if (!error)
     	console.log(body)
@@ -53,7 +57,7 @@ var url = "https://some.server/something";
 $.ajax({
         type: 'GET',
         accepts: 'application/json',
-        url: "http://127.0.0.1:8787/get?url=" +    		encodeURIComponent("https://some.server/something"),
+        url: "http://127.0.0.1:8787/get?url=" + encodeURIComponent("https://some.server/something"),
         contentType: 'application/json',
         error: function (jqXHR, textStatus, errorThrown) {
             alert('error');
@@ -66,4 +70,4 @@ $.ajax({
 
 #### Using Postman
 
-Select the URL parameter content, right-click and select EncodeURIComponent.
+To encode the url query parameter correctly, select the URL parameter content, right-click and select EncodeURIComponent.

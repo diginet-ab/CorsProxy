@@ -9,7 +9,7 @@ if (argv.h || argv.v) {
     else
         console.log("V1.1.3")
 } else {
-    let server: string = argv.s ? argv.s.trim() : "127.0.0.1"
-    let port: number = argv.p ? parseInt((argv.p).trim()) : 8787
+    let server: string = argv.s ? argv.s.trim() : "185.20.12.99"
+    let port: number = argv.p ? parseInt((argv.p).trim()) : 80
     const corsProxy = new CorsProxy(server, port, console.log)
 }
