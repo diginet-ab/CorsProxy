@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { CorsProxy } from "../CorsProxy"
 import * as parseArgs from "minimist"
 
