@@ -13,6 +13,6 @@ export declare class CorsProxy {
      * @param port Server port
      * @param log Optional log function with a string argument
      */
-    constructor(host: string, port: number, log?: (message: string) => void);
+    constructor(host: string, port: number, log?: ((message: string) => void) | undefined);
     catchExceptions: (fn: any) => (req: any, res: any, next: any) => void;
 }
